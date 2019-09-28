@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Raleway|Roboto&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/account.css">
+
+    <title>Discus Questions</title>
+</head>
+
+<body>
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Discus Questions</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav left-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-active" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto right-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-login" href="login.html">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-signup text-center" href="register.html">Get Started</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">
+                                <img class="nav-user-profile" src="images/Portrait_Placeholder.png">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-signup" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="user-profile">
+        <div class="card box text-center">
+            <div class="user-details">
+                <div id="setting">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item btn-danger" href="#">Delete Account</a>
+                        </div>
+                    </div>
+                </div>
+                <h2>Akash Gupta</h2>
+                <h3>akashgupta902</h3>
+                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad illo explicabo iusto unde
+                    ipsam natus quia quod reprehenderit porro debitis repellat sint laboriosam, sunt quas necessitatibus
+                    voluptates distinctio! Impedit, fuga.</p>
+                <p class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> India</p>
+                <p class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i> akash910203955@gmail.com</p>
+                <p><a href="" style="color: #fff;">Change Password ?</a></p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn mt-2" data-toggle="modal" data-target="#exampleModal">
+                    Edit Profile
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Your Profile</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div style="display: none;" class="alert alert-warning form-alert" role="alert">
+                                        <span id="form-alert"></span>
+                                    </div>
+                                    <input type="text" name="name" id="save-name" placeholder="Name"
+                                        class="form-control">
+                                    <textarea name="about-user" id="save-desc" rows="3" class="form-control"
+                                        placeholder="Wite about yourself"></textarea>
+                                    <input type="text" id="save-location" placeholder="Location" class="form-control">
+                                    <div class="custom-control float-left my-2 custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                        <label class="custom-control-label" for="customSwitch1">Show Email Address to
+                                            Public</label>
+                                    </div>
+                                    <button type="submit" class="btn" id="save-btn">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-img">
+                <img src="images/Portrait_Placeholder.png" class="card-img-top">
+                <div class="user-img-inp">
+                    <form action="" id="form-userimg">
+                        <input type="file" name="user-img" onchange="submitForm()" id="user-img" style="display: none;">
+                    </form>
+                </div>
+                <div class="img-select-btn">
+                    <button onclick="UserImg()" class="btn">Choose File</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- alerts -->
+    <div id="alerts">
+        <div class="container">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <span id="alert">How </span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------- Main ---------------- -->
+    <section id="main" class="mt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="add-Question">
+                        <div class="card box mt-4">
+                            <div class="card-header">
+                                <h1>Add Question</h1>
+                            </div>
+                            <form action="">
+                                <div class="field">
+                                    <h3>Title</h3>
+                                    <input type="text" name="title" id="title" autocomplete="off" class="form-control"
+                                        placeholder="Question Title">
+                                    <p>Question in one sentence and Question must starts with What, How, etc</p>
+                                </div>
+
+                                <div class="field">
+                                    <h3 style="margin-top: 36px;">Description</h3>
+                                    <textarea name="desc" id="desc" class="form-control"
+                                        placeholder="Desciption of your Question" rows="4"></textarea>
+                                    <p>optional</p>
+                                </div>
+
+                                <div class="field">
+                                    <h3 style="margin-top: 36px;">Category</h3>
+                                    <div class="categories">
+                                        <input type="text" id="category-input" style="display: none;">
+                                        <ul>
+                                            <li class="category" id="Graphic Design">Graphic Design</li>
+                                            <li class="category" id="Technology">Technology</li>
+                                            <li class="category" id="Gadgets">Gadgets</li>
+                                            <li class="category" id="Education">Education</li>
+                                            <li class="category" id="Computers">Computers</li>
+                                            <li class="category" id="Nature">Nature</li>
+                                            <li class="category" id="Cars">Cars</li>
+                                            <li class="category" id="Animals">Animals</li>
+                                            <li class="category" id="History">History</li>
+                                            <li class="category" id="Fashion">Fashion</li>
+                                            <li class="category" id="Travel">Travel</li>
+                                            <li class="category" id="Insects">Insects</li>
+                                            <li class="category" id="Photography">Photography</li>
+                                            <li class="category" id="Health & Fitness">Health & Fitness</li>
+                                            <li class="category" id="Skills">Skills</li>
+                                            <li class="category" id="Web Development">Web Development</li>
+                                            <li class="category" id="Web Designing">Web Designing</li>
+                                            <li class="category" id="Programming">Programming</li>
+                                            <li class="category" id="Places">Places</li>
+                                        </ul>
+                                    </div>
+                                    <p class="ml-3">Select a topic that best fits your question. Minimum 1
+                                        and maximum 5</p>
+                                </div>
+
+                                <div class="field">
+                                    <h3 style="margin-top: 36px;" class="mb-3">Tags</h3>
+                                    <input type="text" id="tags" autocomplete="off" placeholder="Tags"
+                                        class="form-control">
+                                    <p class="mb-4">Tagging will helps others to easily find your question.tags.
+                                        Seperate Tags using comma ( , ).</p>
+                                </div>
+                                <button class="mb-3 mt-2" id="add-btn">Add Question</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h6 class="text-muted">10 Questions</span></h6>
+
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <h1><a href="question.html">What is HTML?</a></h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="categories mt-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Profile
+                            </div>
+                            <ul class="list-group list-group-flush p-0 m-0">
+                                <li class="list-group-item"><a href="">22 Questins</a></li>
+                                <li class="list-group-item"><a href="">12 Answers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="categories mt-2">
+                        <div class="card">
+                            <div class="card-header">
+                                Knows About
+                                <span class="float-right" style="cursor: pointer;" data-toggle="modal"
+                                    data-target="#exampleModal1"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                            </div>
+                            <ul class="list-group list-group-flush p-0 m-0">
+                                <li class="list-group-item"><a href="">Web Development</a></li>
+                                <li class="list-group-item"><a href="">Programming</a></li>
+                                <li class="list-group-item"><a href="">Designing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <b>The web’s community of communities</b>
+                        <ul>
+                            <li>Discus Questions © 2019</li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Topics</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="topics">
+                        <li class="topics" id="Graphic Design">Graphic Design</li>
+                        <li class="topics" id="Technology">Technology</li>
+                        <li class="topics" id="Gadgets">Gadgets</li>
+                        <li class="topics" id="Education">Education</li>
+                        <li class="topics" id="Computers">Computers</li>
+                        <li class="topics" id="Nature">Nature</li>
+                        <li class="topics" id="Cars">Cars</li>
+                        <li class="topics" id="Animals">Animals</li>
+                        <li class="topics" id="History">History</li>
+                        <li class="topics" id="Fashion">Fashion</li>
+                        <li class="topics" id="Travel">Travel</li>
+                        <li class="topics" id="Insects">Insects</li>
+                        <li class="topics" id="Photography">Photography</li>
+                        <li class="topics" id="Health & Fitness">Health & Fitness</li>
+                        <li class="topics" id="Skills">Skills</li>
+                        <li class="topics" id="Web Development">Web Development</li>
+                        <li class="topics" id="Web Designing">Web Designing</li>
+                        <li class="topics" id="Programming">Programming</li>
+                        <li class="topics" id="Places">Places</li>
+                    </ul>
+                    <form action="">
+                        <input type="text" name="topics" id="topics_inp" style="display: none;">
+                        <button class="btn mt-0" id="topic-btn">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+
+        (function Category() {
+            let category = [];
+            let category_input = document.getElementById('category-input');
+
+            let categories = document.getElementsByClassName('category');
+            for (let i = 0; i < categories.length; i++) {
+                categories[i].addEventListener('click', () => {
+
+                    if (category.includes(categories[i].id)) {
+
+                        let cateIndex = category.indexOf(categories[i].id);
+                        category.splice(cateIndex, 1);
+                        category_input.value = category;
+
+                        categories[i].style.backgroundColor = "rgba(0, 0, 0, 0.04)";
+                        categories[i].style.color = "#333";
+                        categories[i].style.transition = "0.2s";
+                    }
+
+                    else {
+                        if (category.length < 5) {
+                            category.push(categories[i].id);
+                            category_input.value = category;
+
+                            categories[i].style.backgroundColor = "#8B78E6";
+                            categories[i].style.color = "#fff";
+                            categories[i].style.transition = "0.2s";
+                        }
+                    }
+                });
+            }
+        }())
+
+            (function Validation() {
+                document.getElementById('add-btn').addEventListener('click', (event) => {
+
+                    // wh_words
+                    let wh_words = ["what", "which", "who", "whose", "whom", "when", "why", "how", "are", "is", "am"];
+                    let title = false;
+
+                    // get the value from all input field
+                    let titleValue = document.getElementById("title").value;
+                    let descValue = document.getElementById("desc").value;
+                    let categoryValue = document.getElementById("category-input").value;
+                    let tagsValue = document.getElementById("tags").value;
+
+                    // Alert
+                    let alert_msg = document.getElementById("alert");
+                    let alert = document.getElementById("alerts");
+
+                    // split title and check wh words includes or not
+                    let split_title = titleValue.split(" ");
+                    for (let i = 0; i < wh_words.length; i++) {
+                        if (split_title[0].toLowerCase() == wh_words[i].toLowerCase()) {
+                            title = true;
+                        }
+                    }
+
+                    // Title Validation
+                    if (titleValue == "") {
+                        alert_msg.innerText = "Please Enter the Question Title.";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (!title) {
+                        alert_msg.innerText = "This is not a Question! Please Enter Correctly.";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (titleValue.length > 110) {
+                        alert_msg.innerText = "Question is too long!";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    // Description Validation
+                    else if (descValue.length > 400) {
+                        alert_msg.innerText = "Description is too long!";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    // Category Validation
+                    else if (categoryValue == "") {
+                        alert_msg.innerText = "Please choose at lease one Category.";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    // Tags Validation
+                    else if (tagsValue == "") {
+                        alert_msg.innerText = "Please Enter at least one tag.";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (tagsValue.length > 100) {
+                        alert_msg.innerText = "Dont't use too many tags.";
+                        alerts.style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else {
+                        alert_msg.innerText = "";
+                        alerts.style.display = "none";
+                    }
+
+                });
+            }())
+    </script>
+
+    <script>
+            (function EditFormValidation() {
+                document.getElementById('save-btn').addEventListener('click', (event) => {
+
+                    // get the value from all input field
+                    let name = document.getElementById("save-name").value;
+                    let desc = document.getElementById("save-desc").value;
+                    let location = document.getElementById("save-location").value;
+                    let name_regex = /^[A-Za-z ]{5,20}$/i;
+
+                    // Alert
+                    let alert = document.getElementsByClassName('form-alert');
+                    let alert_msg = document.getElementById("form-alert");
+
+                    // Name validation
+                    if (name == "") {
+                        alert_msg.innerText = "Please Enter Your Name.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (name.length < 5) {
+                        alert_msg.innerText = "Name must contain at least 5 characters.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (name.length > 20) {
+                        alert_msg.innerText = "Name must be less than 20 characters.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else if (!(name_regex.test(name))) {
+                        alert_msg.innerText = "Name must be only contain alphabets.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    // Description Validation
+                    else if (desc.length > 250) {
+                        alert_msg.innerText = "Description must be between 250 characters.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    // Location Validation
+                    else if (location.length > 30) {
+                        alert_msg.innerText = "Location is too long.";
+                        alert[0].style.display = "block";
+                        event.preventDefault();
+                    }
+
+                    else {
+                        alert_msg.innerText = "";
+                        alert[0].style.display = "none";
+                    }
+
+                });
+            }())
+
+            (function Topics() {
+                let topics_array = [];
+                let topics_inp = document.getElementById("topics_inp");
+
+                let topics = document.getElementsByClassName('topics');
+                for (let i = 0; i < topics.length; i++) {
+                    topics[i].addEventListener('click', () => {
+
+                        if (topics_array.includes(topics[i].id)) {
+
+                            let topics_index = topics_array.indexOf(topics[i].id);
+                            topics_array.splice(topics_index, 1);
+                            topics_inp.value = topics_array;
+
+                            topics[i].style.backgroundColor = "rgba(0, 0, 0, 0.04)";
+                            topics[i].style.color = "#333";
+                            topics[i].style.transition = "0.3s";
+                        }
+
+                        else {
+                            topics_array.push(topics[i].id);
+                            topics_inp.value = topics_array;
+
+                            topics[i].style.backgroundColor = "#8B78E6";
+                            topics[i].style.color = "#fff";
+                            topics[i].style.transition = "0.3s";
+                        }
+                    });
+                }
+            }())
+
+        function UserImg() {
+            $('#user-img').click();
+        }
+
+        function submitForm() {
+            $('#form-userimg').submit();
+        }
+    </script>
+</body>
+
+</html>

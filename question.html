@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Raleway|Roboto&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/question.css">
+
+    <title>Discus Questions</title>
+</head>
+
+<body>
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Discus Questions</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav left-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-active" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto right-nav">
+                        <li class="nav-item">
+                            <a class="nav-link nav-login" href="login.html">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-signup text-center" href="register.html">Get Started</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">
+                                <img class="nav-user-profile" src="images/Portrait_Placeholder.png">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-signup" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- ---------------- Search ---------------- -->
+
+    <section id="search">
+        <div class="container search">
+            <form>
+                <input type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- <div class="container">
+        <div class="my-4 alert alert-warning alert-dismissible fade show" id="main-alert" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div> -->
+
+
+    <!-- ---------------- Main ---------------- -->
+    <section id="main" class="mt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                    <div class="card box">
+                        <div class="row">
+                            <div class="col-md-1 profile">
+                                <div class="media">
+                                    <a href="#"><img src="images/Portrait_Placeholder.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-md-11 content">
+                                <ul>
+                                    <li><a href="">web development</a></li>
+                                    <li><a href="">web designing</a></li>
+                                    <li><a href="">Graphics</a></li>
+                                </ul>
+                                <h1>What is HTML?</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                    praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                    optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus
+                                    libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic esse,
+                                    molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate beatae.
+                                    Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                <div class="upvote">
+                                    <button title="Like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span
+                                            class="likes">100</span></button>
+                                </div>
+                                <div class="detail">
+                                    <div class="list">
+                                        <div class="answers">243 Answers</div>
+                                        <div class="views"><i class="fa fa-eye" aria-hidden="true"></i> 23000 Views
+                                        </div>
+                                        <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card box" id="submit-answer">
+                        <div class="card-header">
+                            <h3>Submit your Answer</h3>
+                        </div>
+                        <div class="row">
+                            <div class="card-body submit-answer">
+                                <form action="">
+                                    <textarea name="answer" class="form-control" id="" rows="5"
+                                        placeholder="Write Your Answer"></textarea>
+                                    <button type="submit" class="btn">Submit Answer</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <p>10 Answers</p>
+
+                    <div id="answer">
+                        <div class="card box pt-4">
+                            <div class="row">
+                                <div class="col-md-1 profile">
+                                    <div class="media">
+                                        <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 content">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                        praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                        optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        possimus
+                                        libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic
+                                        esse,
+                                        molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate
+                                        beatae.
+                                        Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                    <div class="detail">
+                                        <div class="list">
+                                            <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23
+                                                days
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comment">
+                            <div class="card box">
+                                <div class="row">
+                                    <div class="col-md-1 profile">
+                                        <div class="media">
+                                            <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <form action="">
+                                            <input type="text" id="comment-inp" placeholder="Add a Comment..."
+                                                class="form-control">
+                                            <button type="submit" class="comment-btn btn"><i class="fa fa-paper-plane"
+                                                    aria-hidden="true"></i></button>
+                                        </form>
+                                        <div id="all-comments">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="card">
+                                                    <div id="headingThree">
+                                                        <h2 class="mb-0">
+                                                            <button class="btn btn-link collapsed" type="button"
+                                                                data-toggle="collapse" data-target="#collapseThree3"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                Show all Comments
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                    <div id="collapseThree3" class="collapse"
+                                                        aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-1 profile">
+                                                                    <div class="media">
+                                                                        <a href="account.html"><img
+                                                                                src="images/Portrait_Placeholder.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-11 content">
+                                                                    <p class="m-0 mt-2 ml-3">Three Collapsed</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="answer">
+                        <div class="card box pt-4">
+                            <div class="row">
+                                <div class="col-md-1 profile">
+                                    <div class="media">
+                                        <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 content">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                        praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                        optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        possimus
+                                        libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic
+                                        esse,
+                                        molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate
+                                        beatae.
+                                        Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                    <div class="detail">
+                                        <div class="list">
+                                            <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23
+                                                days
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comment">
+                            <div class="card box">
+                                <div class="row">
+                                    <div class="col-md-1 profile">
+                                        <div class="media">
+                                            <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <form action="">
+                                            <input type="text" id="comment-inp" placeholder="Add a Comment..."
+                                                class="form-control">
+                                            <button type="submit" class="comment-btn btn"><i class="fa fa-paper-plane"
+                                                    aria-hidden="true"></i></button>
+                                        </form>
+                                        <div id="all-comments">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="card">
+                                                    <div id="headingThree">
+                                                        <h2 class="mb-0">
+                                                            <button class="btn btn-link collapsed" type="button"
+                                                                data-toggle="collapse" data-target="#collapseThree1"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                Show all Comments
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                    <div id="collapseThree1" class="collapse"
+                                                        aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-1 profile">
+                                                                    <div class="media">
+                                                                        <a href="account.html"><img
+                                                                                src="images/Portrait_Placeholder.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-11 content">
+                                                                    <p class="m-0 mt-2 ml-3">one collapsed</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="answer">
+                        <div class="card box pt-4">
+                            <div class="row">
+                                <div class="col-md-1 profile">
+                                    <div class="media">
+                                        <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 content">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex quia
+                                        praesentium assumenda porro, doloremque suscipit nesciunt sed tempora, corporis
+                                        optio, Lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                                        possimus
+                                        libero, c Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem hic
+                                        esse,
+                                        molestias illo consequatur quasi veniam nam dolore ipsa aspernatur voluptate
+                                        beatae.
+                                        Eius, modi. Possimus assumenda omnis nesciunt fuga a. </p>
+                                    <div class="detail">
+                                        <div class="list">
+                                            <div class="posted-at"><i class="fa fa-clock-o" aria-hidden="true"></i> 23
+                                                days
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comment">
+                            <div class="card box">
+                                <div class="row">
+                                    <div class="col-md-1 profile">
+                                        <div class="media">
+                                            <a href="account.html"><img src="images/Portrait_Placeholder.png"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <form action="">
+                                            <input type="text" id="comment-inp" placeholder="Add a Comment..."
+                                                class="form-control">
+                                            <button type="submit" class="comment-btn btn"><i class="fa fa-paper-plane"
+                                                    aria-hidden="true"></i></button>
+                                        </form>
+                                        <div id="all-comments">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="card">
+                                                    <div id="headingThree">
+                                                        <h2 class="mb-0">
+                                                            <button class="btn btn-link collapsed" type="button"
+                                                                data-toggle="collapse" data-target="#collapseThree2"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                Show all Comments
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                    <div id="collapseThree2" class="collapse"
+                                                        aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-1 profile">
+                                                                    <div class="media">
+                                                                        <a href="account.html"><img
+                                                                                src="images/Portrait_Placeholder.png"></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-11 content">
+                                                                    <p class="m-0 mt-2 ml-3">two collapsed </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- ---------------- Category ---------------- -->
+                <div class="col-md-3">
+
+                    <div class="info">
+                        <b>The web’s community of communities</b>
+                        <ul>
+                            <li>Discus Questions © 2019</li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
